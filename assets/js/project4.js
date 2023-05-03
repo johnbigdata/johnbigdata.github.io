@@ -21,7 +21,9 @@ p.innerHTML = "Conexión completa";
 sendMessageButton.onclick=function(){
     var input = document.getElementById("paquete").value;
 
-
+    
+    var p_1 = document.getElementById("p3");
+    p_1.innerHTML = "";
     websocketClient.send("4"+input);
     
 
@@ -38,12 +40,10 @@ sendMessageButton.onclick=function(){
 websocketClient.addEventListener('message', (event) => {
 var post2=event.data;
 //console.log(post2);
-
-var input2 = document.getElementById("paquete").value;
     
 
 var p = document.getElementById("p3");
-frase=frase+post2+"<br>"+"<br>";
+frase=post2+"<br>"+"<br>";
 p.innerHTML = frase.replace(/\n/g, '<br>');
 
 //document.getElementById("p3").innerHTML = post2;
