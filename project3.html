@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/header.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/styles_project3.css">
+
+        <title>John</title>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Junior Developer</label>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="project.html">Proyecto 1</a></li>
+                <li><a href="project2.html">Proyecto 2</a></li>
+                <li><a href="project3.html">Proyecto 3</a></li>
+                <li><a href="https://linkedin.com/in/johngp97">Linkedin</a></li>
+            </ul>
+        </nav>
+   
+
+       <div class="container">
+
+        <h2>Web Scraping</h2>
+        
+        <p id="load_server">
+            Estableciendo conexión...espera 10 segundos
+        </p>
+    </br>
+
+        <p>
+            Se mostrará el contenido de las paginas disponibles entre "inicio" y "final"
+            
+        </p>
+    </br>
+        <p>
+            https://stackoverflow.com/questions/inicio
+            https://stackoverflow.com/questions/final
+        </p>
+    </br>
+
+    <p>
+        Si tarda demasiado en mostrar el contenido es porque stackoverflow no permite demasiadas peticiones.
+    </p>
+</br>
+
+        <form id="myform" class="input-form" onsubmit=";return false">
+            <input id="paquete" class="input" type="number" name="name" placeholder="Inicio" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4"><br>
+            <input id="paquete2" class="input" type="number" name="name" placeholder="Final" readonly><br>
+        </br>
+            <input id="boton" type="submit" name=send_message_button2 value="Search" hidden>
+        </form>
+
+        <script>
+            const paquete1 = document.getElementById("paquete");
+            const paquete2 = document.getElementById("paquete2");
+          
+            paquete1.addEventListener("input", () => {
+              var a= eval(paquete1.value);
+              var b=1;
+              var c=a+b;
+              paquete2.value=c;
+              
+            });
+          </script>
+     
+
+        <div class="scroll-container">
+            <p id="p3" class="p">
+
+            </p>
+        </div>
+
+        
+        <a href="https://github.com/johnbigdata/tester">repositorio usando Selenium</a>
+        <p>
+           Selenium requiere de un navegador local, el codigo del servidor usando selenium esta en mi repositorio, pero para esta app he usado la libreria 'cheerio' de nodejs que tambien permite extraer contenido dinámico 
+        </p>
+        
+        
+    
+    </div>
+
+<br><br><br>
+
+
+       
+        
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <h3>Junior Full Stack developer</h3>
+            <p class="footer__copy">&#169 All rigths reserved</p>
+        </footer>
+
+
+
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/project3.js"></script>
+    </body>
+</html>

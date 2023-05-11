@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/header.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/styles_project.css">
+
+        <title>John</title>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Junior Developer</label>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="project.html">Proyecto 1</a></li>
+                <li><a href="project2.html">Proyecto 2</a></li>
+                <li><a href="project3.html">Proyecto 3</a></li>
+                <li><a href="https://linkedin.com/in/johngp97">Linkedin</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+
+        
+        <div class="wrapper">
+            <div class="title">Chatbot + IA</div>
+            <p id="load_server">
+                Connecting to server... wait some seconds
+            </p>
+            <div id="box" class="box">
+                <div class="item">
+                    <div class="msg">
+                        
+                    </div>
+                </div>
+                <div class="item right">
+                    <div class="msg">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="typing-area">
+                <div class="input-field">
+                    <form id="myform" class="input-form" onsubmit=";return false">
+                        <input id="paquete" class="input" type="text" name="name" placeholder="Enter your question"><br>
+                        <button id="boton" type="submit" name=send_message_button2>
+                    </form>
+            
+                </div>
+            </div>
+        </div>
+        <br>
+        <p>Este proyecto esta centrado en la creación y despliegue de una API de comunicación en tiempo real basada en websockets incorporando una inteligencia artificial como valor añadido.
+     
+        </p>
+        <br>
+
+
+    </div>
+        
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <h3>Junior Full Stack Developer</h3>
+        <p class="footer__copy">&#169 All rigths reserved</p>
+    </footer>
+
+
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/project.js"></script>
+    </body>
+</html>
