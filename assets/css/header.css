@@ -16,6 +16,11 @@
     background:rgb(255, 255, 255);
     height:80px;
     width:100%;
+
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 9999;
   }
   
   .enlace{
@@ -106,11 +111,6 @@
       left:0;
     }
   }
-  
-  
-  
-  
-  
   
   
   
