@@ -1,3 +1,22 @@
+
+function connectWebSocket() {
+
+  const websocketClient=new WebSocket("wss://simple-socket-pychange.glitch.me/");
+  websocketClient.onopen=function(message){
+  console.log("client connected")
+  };
+  
+  websocketClient.onclose = function(event) {
+      console.log("Se ha cerrado la conexión");
+      setTimeout(function() {
+        console.log("Intentando reconectar...");
+        connectWebSocket();
+      }, 3000);
+    };
+  }
+connectWebSocket();
+  
+
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
