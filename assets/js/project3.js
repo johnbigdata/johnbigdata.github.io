@@ -1,4 +1,3 @@
-
 var frase="";
 
 function connectWebSocket() {
@@ -31,15 +30,18 @@ sendMessageButton.onclick=function(){
     document.getElementById('paquete2').value='';
     
     
-    
     var submit_boton= document.getElementById("boton");
-    submit_boton.disabled = true;
+      document.getElementById('boton').value = 'cargando';
+      document.getElementById('boton').style.backgroundColor = 'blue';
+      submit_boton.disabled = true;
 };
 
 
 websocketClient.addEventListener('message', (event) => {
 var post2=event.data;
 //console.log(post2);
+document.getElementById('boton').value = 'Buscar';
+document.getElementById('boton').style.backgroundColor = '#3bcd6c';
     
 
 var p = document.getElementById("p3");
