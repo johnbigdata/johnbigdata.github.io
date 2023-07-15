@@ -1,5 +1,4 @@
 
-
 p {
     font-family: 'Poppins', sans-serif;
 }
@@ -8,6 +7,11 @@ p {
 #load_server{
   color:red;
 }
+
+#info{
+  color:#20ad4f;;
+}
+
 
 img {
     width:256px;
@@ -62,5 +66,3 @@ img {
     background-color: #3477b9;
   }
   
-
-
