@@ -1,6 +1,4 @@
 
-
-
 function connectWebSocket() {
 
 const websocketClient=new WebSocket("wss://simple-socket-pychange.glitch.me/");
@@ -19,17 +17,25 @@ p.innerHTML = "Connected";
 sendMessageButton.onclick=function(){
     var input = document.getElementById("paquete").value;
 
-    document.getElementById('paquete').value='';
-    websocketClient.send("2"+input);
-    
-    var submit_boton= document.getElementById("boton");
-    submit_boton.disabled = true;
+    if (input.length>10)
+    {
+      document.getElementById('paquete').value='';
+      websocketClient.send("2"+input);
+      var submit_boton= document.getElementById("boton");
+      document.getElementById('boton').value = 'cargando';
+      document.getElementById('boton').style.backgroundColor = 'blue';
+      submit_boton.disabled = true;
+    }
+
 };
 
 
 websocketClient.addEventListener('message', (event) => {
 var post2=event.data;
 //console.log(post2);
+document.getElementById('boton').value = 'Generar';
+document.getElementById('boton').style.backgroundColor = '#3bcd6c';
+
 
 
 var imagen = document.getElementById("imagen");
@@ -40,7 +46,7 @@ imagen.src = post2;
 
 
 //document.getElementById("p3").innerHTML = post2;
-console.log('Message from server ', event.data);
+//console.log('Message from server ', event.data);
 
 var submit_boton= document.getElementById("boton");
 submit_boton.disabled = false;
