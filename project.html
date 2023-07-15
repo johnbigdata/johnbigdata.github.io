@@ -16,7 +16,9 @@
             <label for="check" class="checkbtn">
                 <i class="fas fa-bars"></i>
             </label>
-            <label class="logo">Junior Developer</label>
+            <a href="index.html">
+                <label class="logo">Junior Developer</label>
+            </a>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="project.html">Proyecto 1</a></li>
@@ -32,7 +34,7 @@
         <div class="wrapper">
             <div class="title">Chatbot + IA</div>
             <p id="load_server">
-                Connecting to server... wait some seconds
+                Conectando con el servidor...espere 20 segundos
             </p>
             <div id="box" class="box">
                 <div class="item">
@@ -50,14 +52,15 @@
             <div class="typing-area">
                 <div class="input-field">
                     <form id="myform" class="input-form" onsubmit=";return false">
-                        <input id="paquete" class="input" type="text" name="name" placeholder="Enter your question"><br>
-                        <button id="boton" type="submit" name=send_message_button2>
+                        <input id="paquete" class="input" type="text" name="name" placeholder="Enter your question">
+                        <input id="boton" value="Preguntar" type="submit" name=send_message_button2>
                     </form>
             
                 </div>
             </div>
         </div>
         <br>
+        <audio id="myAudio"></audio>
         <p>Este proyecto esta centrado en la creación y despliegue de una API de comunicación en tiempo real basada en websockets incorporando una inteligencia artificial como valor añadido.
      
         </p>
