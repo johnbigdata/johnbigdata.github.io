@@ -45,20 +45,22 @@ p {
     width: 70%;
     margin-right: -4px;
   }
-  
+
   .input-form #boton {
     width:100px;
-    box-shadow:0 0 5px #3477b9,
-    0 0 25px #3477b9;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3bcd6c;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    outline: none;
+    display:none;
   }
   
   .input-form #boton:hover {
-    background-color: #669dd4;
-
-    box-shadow:0 0 5px #669dd4,
-    0 0 10px #669dd4,0 0 20px #669dd4,
-    0 0 10px #669dd4,0 0 20px #669dd4;
+    background-color: #3477b9;
   }
   
-
 
