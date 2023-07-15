@@ -1,4 +1,3 @@
-
 var frase="";
 
 function connectWebSocket() {
